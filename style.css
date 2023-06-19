@@ -4,10 +4,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+body{
+    background-color: hsl(0,0%,95%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 400;
+}
 .grandcard{
-    width: 50vw;
-    height: 50vh;
-    margin-left: 300px;
+    width: 960px;
+    
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr; */
+    margin:0 auto;
     
 }
 
@@ -17,8 +31,9 @@
     flex-wrap: wrap; 
     margin: 100px;
     height: auto;
+    border-radius: 12px;
     transition: all 0.2 linear;
-   
+    overflow: hidden;
    
     
 }
@@ -48,17 +63,19 @@
 
 
 }
-button{
-    border-radius: 20px;
-    border: none;
-    padding: 5px 15px;
-    color:rgb(31, 71, 71) ;
-    margin-top: 30px;
+a{
+    border-radius: 25px;
+    border: 2px solid hsl(0, 0%, 95%);
+    display: inline-block;
+    padding: 13px 27px;
+    background-color:white ;
+    margin-top: 60px;
+    text-decoration: none;
 }
 p{
     font-size: 10px;
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 15px;
+    line-height: 1.6;
     padding-bottom: 20px;
     margin-top:20px ;
 
@@ -70,8 +87,65 @@ h3{
 span{
     color: white;
 }
-@media(max-width:768px){
-    .cards{
-        height: auto;
-    }
+.card-1 a{
+    color: orange;
+}
+.card-2 a{
+    color: hsl(179,100%,13%);
+}
+.card-3 a{
+    color: rgb(49, 120, 146);
+   
+}
+.cards a:hover{
+    color: hsl(0,0%,95%);
+    background: transparent;
+}
+@media (max-width:920px){
+    
+   .cards{
+    flex-direction: column;
+    /* padding: 5rem 0; */
+    /* width: 100px; */
+    
+   }
+   p{
+    font-size: 30px;
+}
+h3{
+    margin-top: 30px;
+    font-size: 50px;
+}
+a{
+    padding: 23px 47px;
+    font-size: 40px;
+
+}
+}
+
+@media (max-width:420px){
+
+p{
+    font-size: 30px;
+}
+.cards{
+    flex-direction: column;
+    padding: 100px 100px;
+    height: auto;
+}
+h3{
+    margin-top: 30px;
+    font-size: 50px;
+}
+a{
+    border-radius: 25px;
+    border: 2px solid hsl(0, 0%, 95%);
+    display: inline-block;
+    padding: 23px 67px;
+    background-color:white ;
+    margin-top: 60px;
+    text-decoration: none;
+    font-size: 60px;
+}
+
 }
